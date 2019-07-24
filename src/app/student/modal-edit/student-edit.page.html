@@ -1,0 +1,34 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/student" (click)="closeModal()"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Student
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="student.name" placeholder="Ex.Matheus Catossi"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="student.username" placeholder="Ex.mcatossi"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-input type="text" [(ngModel)]="student.description" placeholder="Ex. Software Developer"></ion-input>
+    </ion-item>
+
+    <section>
+        <ion-button  expand="block" (click)="edit()">{{update == true ? "UPDATE" : "INSERT"}}</ion-button>
+    </section>
+
+
+</ion-content>
