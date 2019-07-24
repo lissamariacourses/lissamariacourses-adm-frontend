@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-buttons slot="end">
+            <ion-icon name="refresh" (click)="refresh()"></ion-icon>
+        </ion-buttons>
+        <ion-title>
+            Courses Classes List 
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item *ngFor="let item of coursesClasses" >
+            <ion-avatar slot="start">
+                <img
+                    src="https://camo.githubusercontent.com/43e30d80225fa803bc7980af9fa0a5788d17b783/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f343330353138382f313639383539372f63636638343466302d356635372d313165332d383434382d3431393962326466653164392e706e67">
+            </ion-avatar>
+            <ion-label>
+                <h2>{{item.title_courseclass}}</h2>
+                <h3>{{item.title_course}}</h3>
+                <p>{{item.description_courseclass}}</p>
+                <p>{{item.status_courseclass}}</p>
+            </ion-label>
+
+            <div class="item-note" slot="end">
+                <ion-icon name="create" (click)="editCourseClass(item)"></ion-icon>
+            </div>
+        </ion-item>
+    </ion-list>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed" (click)="addCourseClass()">
+        <ion-fab-button>
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
+</ion-content>

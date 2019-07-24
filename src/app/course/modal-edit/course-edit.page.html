@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/course" (click)="closeModal()"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Course
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item>
+        <ion-label>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="course.title" placeholder="Ex. London Lash Course"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-input type="text" [(ngModel)]="course.description" placeholder="Ex. This course is good because..."></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Days</ion-label>
+        <ion-input type="text" [(ngModel)]="course.days" placeholder="Ex. 3"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Manual</ion-label>
+        <ion-input type="text" [(ngModel)]="course.manual" placeholder="Ex. linkmanual.com.br"></ion-input>
+    </ion-item>
+
+    <section>
+        <ion-button  expand="block" (click)="edit()">{{update == true ? "UPDATE" : "INSERT"}}</ion-button>
+    </section>
+
+
+</ion-content>

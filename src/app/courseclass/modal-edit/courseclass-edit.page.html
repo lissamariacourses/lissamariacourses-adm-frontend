@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="/courseclass/{{course_id}}" (click)="closeModal()"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            Course Class
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item>
+        <ion-label>Title</ion-label>
+        <ion-input type="text" [(ngModel)]="courseclass.title" placeholder="Ex. Course Class JUNDIAI"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Description</ion-label>
+        <ion-input type="text" [(ngModel)]="courseclass.description" placeholder="Ex. JUNDIAI"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Status</ion-label>
+        <ion-input type="text" [(ngModel)]="courseclass.status" placeholder="Ex. OPEN"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Start Date</ion-label>
+        <ion-input type="text" [(ngModel)]="courseclass.start_date" placeholder="Ex. 22/04/1997"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>End Date</ion-label>
+        <ion-input type="text" [(ngModel)]="courseclass.end_date" placeholder="Ex. 22/04/1997"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-label>Course</ion-label>
+        <ion-select placeholder="Select One" [(ngModel)]="courseclass.course_id">
+            <ion-select-option *ngFor="let item of courses" value="{{item.id}}">{{item.title}}</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <section>
+        <ion-button expand="block" (click)="edit()">{{update == true ? "UPDATE" : "INSERT"}}</ion-button>
+    </section>
+
+
+</ion-content>

@@ -14,6 +14,18 @@ const routes: Routes = [
   {
     path: 'student',
     loadChildren: './student/student.module#StudentPageModule'
+  },
+  {
+    path: 'course',
+    loadChildren: './course/course.module#CoursePageModule'
+  },
+  {
+    path: 'courseclass',
+    loadChildren: './courseclass/courseclass.module#CourseClassPageModule'
+  },
+  {
+    path: 'courseclass/:id',
+    loadChildren: './courseclass/courseclass.module#CourseClassPageModule'
   }
 ];
 

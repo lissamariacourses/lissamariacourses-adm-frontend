@@ -1,5 +1,8 @@
 {
   "name": "lissamariacourses",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }

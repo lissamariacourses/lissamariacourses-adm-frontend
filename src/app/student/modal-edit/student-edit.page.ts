@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { NavParams, NavController, ModalController } from '@ionic/angular';
-import { Student } from 'src/app/model/student.model';
-import { StudentProvider } from 'src/app/provider/student.provider';
+import { Student } from 'src/model/student.model';
+import { StudentProvider } from 'src/provider/student.provider';
 
 @Component({
   selector: 'student-edit',
